@@ -26,7 +26,7 @@ Persistence
 -----------
 >**Todos** are stored as json files here:
 ```
-~/.todo/data
+~/.todofx/data
 ```
 
 Logging
