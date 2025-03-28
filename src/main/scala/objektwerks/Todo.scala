@@ -2,6 +2,8 @@ package objektwerks
 
 import java.time.Instant
 
+import scalafx.beans.property.ObjectProperty
+
 import upickle.default.ReadWriter as JsonSupport
 
 object Todo:
@@ -15,4 +17,9 @@ final case class Todo(id: Int,
                       created: String = datetime(),
                       completed: String = "",
                       todo: String) derives CanEqual, JsonSupport:
+  val idProperty = ObjectProperty(id)
+  val createdProperty = ObjectProperty(created)
+  val completedProperty = ObjectProperty(completed)
+  val todoProperty = ObjectProperty(todo)
+
   def file: String = s"$id.json"
