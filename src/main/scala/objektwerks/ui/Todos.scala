@@ -51,7 +51,7 @@ final class Todos(context: Context, store: Store) extends VBox:
 
   val buttonBar = new HBox:
     spacing = 6
-    padding = Insets(3)
+    padding = Insets(6)
     children = List(buttonAdd, buttonEdit)
 
   children = List(labelTodos, tableViewTodos, buttonBar)
