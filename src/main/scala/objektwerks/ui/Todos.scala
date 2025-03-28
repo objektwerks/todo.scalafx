@@ -9,8 +9,7 @@ import scalafx.scene.layout.{HBox, VBox}
 import objektwerks.{Store, Todo}
 
 final class Todos(context: Context, store: Store) extends VBox:
-  println(context)
-  println(store)
+  padding = Insets(6)
 
   val labelTodos = new Label:
     text = context.labelTodos
