@@ -1,7 +1,7 @@
 package objektwerks.ui
 
 import scalafx.collections.ObservableBuffer
-import scalafx.scene.control.{Label, ListView}
+import scalafx.scene.control.{Button, Label, ListView}
 import scalafx.scene.layout.VBox
 
 import objektwerks.{Store, Todo}
@@ -21,3 +21,5 @@ final class Todos(context: Context, store: Store) extends VBox:
     text = context.buttonAdd
     disable = false
     onAction = { _ => add() }
+
+  private def add(): Unit = ???
