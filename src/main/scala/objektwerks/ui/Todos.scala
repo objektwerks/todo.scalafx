@@ -15,3 +15,9 @@ final class Todos(context: Context, store: Store) extends VBox:
 
   val listViewTodos = new ListView[Todo]:
     items = ObservableBuffer.from( store.listTodos() )
+
+  val buttonAdd = new Button:
+    graphic = context.imageViewAdd
+    text = context.buttonAdd
+    disable = false
+    onAction = { _ => add() }
