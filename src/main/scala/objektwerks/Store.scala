@@ -7,7 +7,7 @@ import upickle.default.{read => readJson, write => writeJson}
 import Todo.given
 
 final class Store extends LazyLogging:
-  private val todosPath = os.home / ".todo" / "data"
+  private val todosPath = os.home / ".todofx" / "data"
 
   os.makeDir.all(todosPath)
   logger.info("Initialized store.")
