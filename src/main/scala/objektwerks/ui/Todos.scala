@@ -1,8 +1,9 @@
 package objektwerks.ui
 
+import scalafx.Includes.*
 import scalafx.collections.ObservableBuffer
 import scalafx.geometry.Insets
-import scalafx.scene.control.{Button, Label, SelectionMode, SelectionModel, TableColumn, TableView}
+import scalafx.scene.control.{Button, Label, SelectionMode, TableColumn, TableView}
 import scalafx.scene.layout.{HBox, VBox}
 
 import objektwerks.{Store, Todo}
@@ -14,11 +15,11 @@ final class Todos(context: Context, store: Store) extends VBox:
   val labelTodos = new Label:
     text = context.labelTodos
 
-  val tableView = new TableView[Todo]():
+  val tableViewTodos = new TableView[Todo]():
     columns ++= List(
       new TableColumn[Todo, Int]:
         text = context.columnId
-        cellValueFactory = _.value.nameProperty
+        cellValueFactory = _.value.idProperty
     )
     items = ObservableBuffer.from( store.listTodos() )
     columnResizePolicy = TableView.ConstrainedResizePolicy
@@ -41,7 +42,7 @@ final class Todos(context: Context, store: Store) extends VBox:
     padding = Insets(3)
     children = List(buttonAdd, buttonEdit)
 
-  children = List(labelTodos, listViewTodos, buttonBar)
+  children = List(labelTodos, tableViewTodos, buttonBar)
 
   private def add(): Unit = ???
 
