@@ -27,11 +27,7 @@ Commands
 
 Run
 ---
-1. ```sbt "run list --filter all"```
-2. ```sbt "run add --todo drink beer"```
-3. ```sbt "run complete --id 1"```
-4. ```sbt "run help"```
->```sbt run``` displays the help menu.
+1. ```sbt run```
 
 Execute
 -------
