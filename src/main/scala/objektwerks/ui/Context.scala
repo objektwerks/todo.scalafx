@@ -16,4 +16,6 @@ final class Context(config: Config):
   val menuAbout = config.getString("menu.about")
   val menuExit = config.getString("menu.exit")
 
+  val labelTodos = config.getString("label.todos")
+
   def imageAppIcon = Image(Image.getClass.getResourceAsStream("/image/todo.png"))
