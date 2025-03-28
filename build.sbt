@@ -14,6 +14,10 @@ libraryDependencies ++= Seq(
 scalacOptions ++= Seq(
   "-Wunused:all"
 )
+outputStrategy := Some(StdoutOutput)
+parallelExecution := false
+fork := true
+
 // Begin: Assembly Tasks
 lazy val createAssemblyDir = taskKey[File]("Create assembly dir.")
 createAssemblyDir := {
