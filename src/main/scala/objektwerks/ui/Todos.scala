@@ -34,6 +34,8 @@ final class Todos(context: Context, store: Store) extends VBox:
     padding = Insets(3)
     children = List(buttonAdd, buttonEdit)
 
+  children = List(labelTodos, listViewTodos, buttonBar)
+
   private def add(): Unit = ???
 
   private def edit(): Unit = ???
