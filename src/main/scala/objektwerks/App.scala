@@ -3,6 +3,9 @@ package objektwerks
 import com.typesafe.config.ConfigFactory
 import com.typesafe.scalalogging.LazyLogging
 
+import java.awt.{Taskbar, Toolkit}
+import java.awt.Taskbar.Feature
+
 import scalafx.application.JFXApp3
 
 object App extends JFXApp3 with LazyLogging:
@@ -22,7 +25,7 @@ object App extends JFXApp3 with LazyLogging:
       val taskbar = Taskbar.getTaskbar()
       if taskbar.isSupported(Feature.ICON_IMAGE) then
         val defaultToolkit = Toolkit.getDefaultToolkit()
-        val appIcon = defaultToolkit.getImage(getClass().getResource("/image/icon.png"))
+        val appIcon = defaultToolkit.getImage(getClass().getResource("/todo.png"))
         taskbar.setIconImage(appIcon)
 
     stage.show()
