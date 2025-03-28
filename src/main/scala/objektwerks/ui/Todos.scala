@@ -22,4 +22,12 @@ final class Todos(context: Context, store: Store) extends VBox:
     disable = false
     onAction = { _ => add() }
 
+  val buttonEdit = new Button:
+    graphic = context.imageViewEdit
+    text = context.buttonEdit
+    disable = false
+    onAction = { _ => edit() }
+
   private def add(): Unit = ???
+
+  private def edit(): Unit = ???
