@@ -15,7 +15,7 @@ final class Menu(context: Context) extends MenuBar:
 
   val gridPaneAbout = new GridPane():
     prefHeight = 120
-    prefWidth = 200
+    prefWidth = 280
   gridPaneAbout.add(textAreaAbout, 0, 0)
 
   val menuItemAbout = new MenuItem:
