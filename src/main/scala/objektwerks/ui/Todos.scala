@@ -20,6 +20,18 @@ final class Todos(context: Context, store: Store) extends VBox:
       new TableColumn[Todo, Int]:
         text = context.columnId
         cellValueFactory = _.value.idProperty
+      ,
+      new TableColumn[Todo, String]:
+        text = context.columnCreated
+        cellValueFactory = _.value.createdProperty
+      ,
+      new TableColumn[Todo, String]:
+        text = context.columnCompleted
+        cellValueFactory = _.value.completedProperty
+      ,
+      new TableColumn[Todo, String]:
+        text = context.columnTodo
+        cellValueFactory = _.value.todoProperty
     )
     items = ObservableBuffer.from( store.listTodos() )
     columnResizePolicy = TableView.ConstrainedResizePolicy
