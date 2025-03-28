@@ -6,7 +6,7 @@ import scalafx.scene.layout.VBox
 final class View(context: Context):
   val menu = Menu(context)
 
-  val todos = Todos()
+  val todos = Todos(context)
 
   val vbox = new VBox:
     prefWidth = context.windowWidth
