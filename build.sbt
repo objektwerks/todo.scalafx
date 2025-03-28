@@ -1,4 +1,4 @@
-name := "todo.cli"
+name := "todo.scalafx"
 organization := "objektwerks"
 version := "0.8-SNAPSHOT"
 scalaVersion := "3.6.4"
