@@ -18,4 +18,7 @@ final class Context(config: Config):
 
   val labelTodos = config.getString("label.todos")
 
+  val buttonAdd = config.getString("button.add")
+  val buttonEdit = config.getString("button.edit")
+
   def imageAppIcon = Image(Image.getClass.getResourceAsStream("/image/todo.png"))
