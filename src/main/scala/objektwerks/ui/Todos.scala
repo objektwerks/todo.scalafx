@@ -17,7 +17,7 @@ final class Todos(context: Context, store: Store) extends VBox:
   val tableView = new TableView[Todo]():
     columns ++= List(
       new TableColumn[Todo, Int]:
-        text = context.columnRecipe
+        text = context.columnId
         cellValueFactory = _.value.nameProperty
     )
     items = ObservableBuffer.from( store.listTodos() )
