@@ -12,6 +12,7 @@ final class Todos(context: Context, store: Store) extends VBox:
   padding = Insets(6)
 
   val labelTodos = new Label:
+    padding = Insets(3)
     text = context.labelTodos
 
   val tableViewTodos = new TableView[Todo]():
