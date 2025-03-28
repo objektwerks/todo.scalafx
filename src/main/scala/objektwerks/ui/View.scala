@@ -1,7 +1,9 @@
-package objektwerks
+package objektwerks.ui
 
 import scalafx.scene.Scene
 import scalafx.scene.layout.VBox
+
+import objektwerks.Store
 
 final class View(context: Context, store: Store):
   val menu = Menu(context)

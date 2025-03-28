@@ -1,4 +1,4 @@
-package objektwerks
+package objektwerks.ui
 
 import scalafx.Includes._
 import scalafx.application.Platform
@@ -6,6 +6,7 @@ import scalafx.event.ActionEvent
 import scalafx.scene.control.{Alert, Menu => MenuRoot, MenuBar, MenuItem, SeparatorMenuItem, TextArea}
 import scalafx.scene.control.Alert.AlertType
 import scalafx.scene.layout.GridPane
+
 
 final class Menu(context: Context) extends MenuBar:
   val textAreaAbout = new TextArea():

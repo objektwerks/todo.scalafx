@@ -1,4 +1,4 @@
-package objektwerks
+package objektwerks.ui
 
 import com.typesafe.config.Config
 
