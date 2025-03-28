@@ -1,6 +1,6 @@
-Todo CLI
---------
->Todo command line app using MainArgs, Os-lib, uPickle and Scala 3.
+Todo ScalaFx
+------------
+>Todo ScalaFx app using MainArgs, Os-lib, uPickle and Scala 3.
 
 Build
 -----
