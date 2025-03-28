@@ -16,6 +16,11 @@ final class Context(config: Config):
   val menuAbout = config.getString("menu.about")
   val menuExit = config.getString("menu.exit")
 
+  val columnId = config.getString("column.id")
+  val columnCreated = config.getString("column.created")
+  val columnCompleted = config.getString("column.completed")
+  val columnTodo = config.getString("column.todo")
+
   val labelTodos = config.getString("label.todos")
 
   val buttonAdd = config.getString("button.add")
