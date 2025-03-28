@@ -1,8 +1,9 @@
 package objektwerks.ui
 
 import scalafx.collections.ObservableBuffer
+import scalafx.geometry.Insets
 import scalafx.scene.control.{Button, Label, ListView}
-import scalafx.scene.layout.VBox
+import scalafx.scene.layout.{HBox, VBox}
 
 import objektwerks.{Store, Todo}
 
@@ -27,6 +28,11 @@ final class Todos(context: Context, store: Store) extends VBox:
     text = context.buttonEdit
     disable = false
     onAction = { _ => edit() }
+
+  val buttonBar = new HBox:
+    spacing = 6
+    padding = Insets(3)
+    children = List(buttonAdd, buttonEdit)
 
   private def add(): Unit = ???
 
