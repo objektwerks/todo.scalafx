@@ -10,4 +10,4 @@ final class Todos(context: Context, store: Store) extends VBox:
   println(store)
 
   val labelTodos = new Label:
-    text = context.menuAbout
+    text = context.labelTodos
