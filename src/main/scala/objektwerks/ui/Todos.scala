@@ -1,15 +1,14 @@
 package objektwerks.ui
 
 import scalafx.Includes.*
-import scalafx.collections.ObservableBuffer
 import scalafx.geometry.Insets
 import scalafx.scene.control.{Alert, Button, Label, SelectionMode, TableColumn, TableView, TextInputDialog}
 import scalafx.scene.control.Alert.AlertType
 import scalafx.scene.layout.{HBox, VBox}
 
-import objektwerks.{Store, Todo}
+import objektwerks.Todo
 
-final class Todos(context: Context, store: Store) extends VBox:
+final class Todos(context: Context, model: Model) extends VBox:
   padding = Insets(6)
 
   val labelTodos = new Label:
@@ -38,7 +37,7 @@ final class Todos(context: Context, store: Store) extends VBox:
         text = context.columnTodo
         cellValueFactory = _.value.todoProperty
     )
-    items = ObservableBuffer.from( store.listTodos() ) // Create Model!
+    items = model.observableTodos
     columnResizePolicy = TableView.ConstrainedResizePolicy
     selectionModel().selectionModeProperty.value = SelectionMode.Single
 
@@ -75,8 +74,8 @@ final class Todos(context: Context, store: Store) extends VBox:
       contentText = context.dialogAddTodoContentText
     dialogAddTodo.showAndWait() match
       case Some(todo) =>
-        val newTodo = Todo(id = store.nextId(), todo = todo)
-        store.writeTodo(newTodo) // Add to list! Build model!
+        val newTodo = Todo(id = model.store.nextId(), todo = todo)
+        model.store.writeTodo(newTodo) // Add to list! Build model!
       case None =>
 
   private def completed(): Unit =
