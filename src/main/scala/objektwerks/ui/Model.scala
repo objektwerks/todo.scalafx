@@ -13,3 +13,5 @@ final class Model(val store: Store) extends LazyLogging:
   val selectedTodo = ObjectProperty( Todo(id = 0, todo = "") )
 
   logger.info("Initialized model.")
+
+  def add(todo: Todo): Unit = ???
