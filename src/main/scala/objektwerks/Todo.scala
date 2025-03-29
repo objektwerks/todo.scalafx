@@ -12,7 +12,7 @@ object Todo:
 
   given Ordering[Todo] = Ordering.by[Todo, String](t => t.created).reverse
 
-  def default(): Todo = Todo(id = 1, todo = "Drink beer!")
+  def default(): Todo = Todo(id = 1, todo = "drink beer")
 
   def datetime(): String = dateTimeFormatter.format( LocalDateTime.now )
 
