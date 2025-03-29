@@ -65,8 +65,8 @@ final class Todos(context: Context, store: Store) extends VBox:
     val dialogAddTodo = new TextInputDialog():
       initOwner(App.stage)
       title = context.windowTitle
-      headerText = "Add Todo"
-      contentText = "todo"
+      headerText = context.dialogAddTodoHeaderText
+      contentText = context.dialogAddTodoContentText
     dialogAddTodo.showAndWait() match
       case Some(todo) => println("TODO: " + todo)
       case None => Alert(AlertType.Information, "Please, provide a todo.").showAndWait()
