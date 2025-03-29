@@ -65,7 +65,7 @@ final class Todos(context: Context, model: Model) extends VBox:
 
   children = List(labelTodos, tableViewTodos, buttonBar)
 
-  private def add(): Unit =
+  def add(): Unit =
     val dialogAddTodo = new TextInputDialog():
       initOwner(App.stage)
       title = context.windowTitle
@@ -79,7 +79,7 @@ final class Todos(context: Context, model: Model) extends VBox:
         model.selectedTodo.value = newTodo
       case None =>
 
-  private def completed(): Unit =
+  def completed(): Unit =
     val selectedTodo = model.selectedTodo.value
     val completedTodo = selectedTodo.copy(completed = Todo.datetime())
     model.store.writeTodo(completedTodo)
