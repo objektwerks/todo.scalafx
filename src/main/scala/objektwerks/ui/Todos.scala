@@ -2,8 +2,7 @@ package objektwerks.ui
 
 import scalafx.Includes.*
 import scalafx.geometry.Insets
-import scalafx.scene.control.{Alert, Button, Label, SelectionMode, TableColumn, TableView, TextInputDialog}
-import scalafx.scene.control.Alert.AlertType
+import scalafx.scene.control.{Button, Label, SelectionMode, TableColumn, TableView, TextInputDialog}
 import scalafx.scene.layout.{HBox, VBox}
 
 import objektwerks.Todo
@@ -81,6 +80,11 @@ final class Todos(context: Context, model: Model) extends VBox:
       case None =>
 
   private def completed(): Unit =
-    // Get selected todo!
-    Alert(AlertType.Information, "TODO: completed!").showAndWait()
-    buttonCompleted.disable = true
+    val selectedTodo = model.selectedTodo.value
+    val completedTodo = selectedTodo.copy(completed = Todo.datetime())
+    model.store.writeTodo(completedTodo)
+    val index = model.observableTodos.indexOf(selectedTodo)
+    if index > -1 then
+      model.observableTodos.update(index, completedTodo)
+      model.selectedTodo.value = completedTodo
+      buttonCompleted.disable = true
