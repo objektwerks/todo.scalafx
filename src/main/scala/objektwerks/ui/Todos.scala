@@ -77,6 +77,7 @@ final class Todos(context: Context, model: Model) extends VBox:
         val newTodo = Todo(id = model.store.nextId(), todo = todo)
         model.store.writeTodo(newTodo)
         model.observableTodos.insert(0, newTodo)
+        model.selectedTodo.value = newTodo
       case None =>
 
   private def completed(): Unit =
