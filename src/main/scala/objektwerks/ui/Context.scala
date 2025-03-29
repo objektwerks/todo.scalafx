@@ -25,6 +25,9 @@ final class Context(config: Config):
   val labelTodo = config.getString("label.todo")
   val labelCompleted = config.getString("label.completed")
 
+  val dialogAddTodoHeaderText = config.getString("dialog.add.todo.HeaderText")
+  val dialogAddTodoContentText = config.getString("dialog.add.todo.ContentText")
+
   val buttonAdd = config.getString("button.add")
   val buttonCompleted = config.getString("button.completed")
 
