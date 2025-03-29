@@ -1,6 +1,6 @@
 name := "todo.scalafx"
 organization := "objektwerks"
-version := "0.1-SNAPSHOT"
+version := "0.1"
 scalaVersion := "3.6.4"
 libraryDependencies ++= Seq(
   "org.scalafx" %% "scalafx" % "23.0.1-R34",
