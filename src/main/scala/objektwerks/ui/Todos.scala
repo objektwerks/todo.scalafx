@@ -73,10 +73,11 @@ final class Todos(context: Context, model: Model) extends VBox:
       contentText = context.dialogAddTodoContentText
     dialogAddTodo.showAndWait() match
       case Some(todo) =>
-        val newTodo = Todo(id = model.store.nextId(), todo = todo)
-        model.store.writeTodo(newTodo)
-        model.observableTodos.insert(0, newTodo)
-        model.selectedTodo.value = newTodo
+        if todo.nonEmpty then
+          val newTodo = Todo(id = model.store.nextId(), todo = todo)
+          model.store.writeTodo(newTodo)
+          model.observableTodos.insert(0, newTodo)
+          model.selectedTodo.value = newTodo
       case None =>
 
   def completed(): Unit =
