@@ -3,12 +3,10 @@ package objektwerks.ui
 import scalafx.scene.Scene
 import scalafx.scene.layout.VBox
 
-import objektwerks.Store
-
-final class View(context: Context, store: Store):
+final class View(context: Context, model: Model):
   val menu = Menu(context)
 
-  val todos = Todos(context, store)
+  val todos = Todos(context, model)
 
   val vbox = new VBox:
     prefWidth = context.windowWidth
