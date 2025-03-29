@@ -15,3 +15,5 @@ final class Model(val store: Store) extends LazyLogging:
   logger.info("Initialized model.")
 
   def add(todo: Todo): Unit = ???
+
+  def completed(todo: Todo): Unit = ???
