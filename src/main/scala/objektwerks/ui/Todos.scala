@@ -75,7 +75,8 @@ final class Todos(context: Context, model: Model) extends VBox:
     dialogAddTodo.showAndWait() match
       case Some(todo) =>
         val newTodo = Todo(id = model.store.nextId(), todo = todo)
-        model.store.writeTodo(newTodo) // Add to list! Build model!
+        model.store.writeTodo(newTodo)
+        model.observableTodos.addAll(newTodo) // refresh tableview?
       case None =>
 
   private def completed(): Unit =
