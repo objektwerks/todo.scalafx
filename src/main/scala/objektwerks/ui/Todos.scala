@@ -12,6 +12,7 @@ final class Todos(context: Context, model: Model) extends VBox:
 
   val labelTodos = new Label:
     padding = Insets(3)
+    style = "-fx-font-weight: bold"
     text = context.labelTodos
 
   val tableViewTodos = new TableView[Todo]():
