@@ -42,6 +42,12 @@ final class Todos(context: Context, store: Store) extends VBox:
     columnResizePolicy = TableView.ConstrainedResizePolicy
     selectionModel().selectionModeProperty.value = SelectionMode.Single
 
+  tableViewTodos.selectionModel().selectedItemProperty().addListener { (_, _, selectedTodo) =>
+    if selectedTodo != null then
+      // model.selectedTodo.value = selectedTodo
+      buttonCompleted.disable = false
+  }
+
   val buttonAdd = new Button:
     graphic = context.imageViewAdd
     text = context.buttonAdd
