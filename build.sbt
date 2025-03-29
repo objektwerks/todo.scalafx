@@ -51,7 +51,7 @@ copyAssemblyJar := {
 // End: Assembly Tasks
 
 // Begin: Assembly
-assemblyJarName := s"todo-${version.value}.jar"
+assemblyJarName := s"todo-scalafx-${version.value}.jar"
 assembly / assemblyMergeStrategy := {
   case PathList("META-INF",  xs @ _*) => MergeStrategy.discard
   case x => MergeStrategy.first
