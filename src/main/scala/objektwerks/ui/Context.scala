@@ -24,7 +24,7 @@ final class Context(config: Config):
   val labelTodos = config.getString("label.todos")
 
   val buttonAdd = config.getString("button.add")
-  val buttonEdit = config.getString("button.edit")
+  val buttonCompleted = config.getString("button.completed")
 
   def imageViewAdd = loadImageView("/image/add.png")
   def imageViewEdit = loadImageView("/image/edit.png")
