@@ -72,18 +72,9 @@ final class Todos(context: Context, model: Model) extends VBox:
       headerText = context.dialogAddTodoHeaderText
       contentText = context.dialogAddTodoContentText
     dialogAddTodo.showAndWait() match
-      case Some(todo) =>
-        if todo.nonEmpty then
-          val newTodo = Todo(id = model.store.nextId(), todo = todo)
-          model.add(newTodo)
+      case Some(todo) => if todo.nonEmpty then model.add(todo)
       case None =>
 
   def completed(): Unit =
-    val selectedTodo = model.selectedTodo.value
-    val completedTodo = selectedTodo.copy(completed = Todo.datetime())
-    model.store.writeTodo(completedTodo)
-    val index = model.observableTodos.indexOf(selectedTodo)
-    if index > -1 then
-      model.observableTodos.update(index, completedTodo)
-      model.selectedTodo.value = completedTodo
+    model.completed()
     buttonCompleted.disable = true
