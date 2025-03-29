@@ -22,6 +22,8 @@ final class Context(config: Config):
   val columnTodo = config.getString("column.todo")
 
   val labelTodos = config.getString("label.todos")
+  val labelTodo = config.getString("label.todo")
+  val labelCompleted = config.getString("label.completed")
 
   val buttonAdd = config.getString("button.add")
   val buttonCompleted = config.getString("button.completed")
