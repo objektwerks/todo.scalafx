@@ -62,11 +62,13 @@ final class Todos(context: Context, store: Store) extends VBox:
   children = List(labelTodos, tableViewTodos, buttonBar)
 
   private def add(): Unit =
-    val dialogAddTodo = new TextInputDialog() {
+    val dialogAddTodo = new TextInputDialog():
       initOwner(App.stage)
       title = "Add Todo"
       headerText = "Add Todo"
       contentText = "todo"
-    }
+    dialogAddTodo.showAndWait() match
+      case Some(todo) => println("TODO: " + todo)
+      case None => Alert(AlertType.Information, "Please, provide a todo.").showAndWait()
 
   private def completed(): Unit = Alert(AlertType.Information, "Completed todo!").showAndWait()
