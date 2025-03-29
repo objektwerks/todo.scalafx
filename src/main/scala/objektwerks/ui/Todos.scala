@@ -64,7 +64,7 @@ final class Todos(context: Context, store: Store) extends VBox:
   private def add(): Unit =
     val dialogAddTodo = new TextInputDialog():
       initOwner(App.stage)
-      title = "Add Todo"
+      title = context.windowTitle
       headerText = "Add Todo"
       contentText = "todo"
     dialogAddTodo.showAndWait() match
