@@ -27,7 +27,7 @@ final class Context(config: Config):
   val buttonCompleted = config.getString("button.completed")
 
   def imageViewAdd = loadImageView("/image/add.png")
-  def imageViewEdit = loadImageView("/image/edit.png")
+  def imageViewCompleted = loadImageView("/image/completed.png")
   def imageAppIcon = Image(Image.getClass.getResourceAsStream("/image/todo.png"))
 
   private def loadImageView(path: String): ImageView = new ImageView:

@@ -48,7 +48,7 @@ final class Todos(context: Context, store: Store) extends VBox:
     onAction = { _ => add() }
 
   val buttonCompleted = new Button:
-    graphic = context.imageViewEdit
+    graphic = context.imageViewCompleted
     text = context.buttonCompleted
     disable = false
     onAction = { _ => completed() }
