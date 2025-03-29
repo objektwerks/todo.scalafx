@@ -51,7 +51,7 @@ final class Todos(context: Context, store: Store) extends VBox:
     graphic = context.imageViewEdit
     text = context.buttonEdit
     disable = false
-    onAction = { _ => edit() }
+    onAction = { _ => completed() }
 
   val buttonBar = new HBox:
     spacing = 6
@@ -62,4 +62,4 @@ final class Todos(context: Context, store: Store) extends VBox:
 
   private def add(): Unit = ???
 
-  private def edit(): Unit = ???
+  private def completed(): Unit = ???
