@@ -51,7 +51,7 @@ final class Todos(context: Context, store: Store) extends VBox:
   val buttonCompleted = new Button:
     graphic = context.imageViewCompleted
     text = context.buttonCompleted
-    disable = false
+    disable = true
     onAction = { _ => completed() }
 
   val buttonBar = new HBox:
@@ -76,3 +76,4 @@ final class Todos(context: Context, store: Store) extends VBox:
   private def completed(): Unit =
     // Get selected todo!
     Alert(AlertType.Information, "TODO: completed!").showAndWait()
+    buttonCompleted.disable = true
