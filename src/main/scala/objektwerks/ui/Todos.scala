@@ -70,8 +70,9 @@ final class Todos(context: Context, store: Store) extends VBox:
     dialogAddTodo.showAndWait() match
       case Some(todo) =>
         val newTodo = Todo(id = store.nextId(), todo = todo)
-        store.writeTodo(newTodo) // Add to list?
-      case None => Alert(AlertType.Information, "Please, provide a todo.").showAndWait()
+        store.writeTodo(newTodo) // Add to list! Build model!
+      case None =>
 
   private def completed(): Unit =
+    // Get selected todo!
     Alert(AlertType.Information, "TODO: completed!").showAndWait()
