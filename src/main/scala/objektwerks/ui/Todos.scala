@@ -61,6 +61,6 @@ final class Todos(context: Context, store: Store) extends VBox:
 
   children = List(labelTodos, tableViewTodos, buttonBar)
 
-  private def add(): Unit = Alert(AlertType.Information, "Add todo!")
+  private def add(): Unit = Alert(AlertType.Information, "Add todo!").showAndWait()
 
-  private def completed(): Unit = Alert(AlertType.Information, "Completed todo!")
+  private def completed(): Unit = Alert(AlertType.Information, "Completed todo!").showAndWait()
