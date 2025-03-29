@@ -12,7 +12,7 @@ Test
 
 Assembly
 --------
-1. ```sbt clean test assembly```
+1. ```sbt clean test assembly copyAssemblyJar```
 
 Run
 ---
