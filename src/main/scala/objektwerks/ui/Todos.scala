@@ -76,7 +76,7 @@ final class Todos(context: Context, model: Model) extends VBox:
       case Some(todo) =>
         val newTodo = Todo(id = model.store.nextId(), todo = todo)
         model.store.writeTodo(newTodo)
-        model.observableTodos.addAll(newTodo) // refresh tableview?
+        model.observableTodos.insert(0, newTodo)
       case None =>
 
   private def completed(): Unit =
