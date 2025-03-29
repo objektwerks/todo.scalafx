@@ -3,7 +3,7 @@ package objektwerks.ui
 import scalafx.Includes.*
 import scalafx.collections.ObservableBuffer
 import scalafx.geometry.Insets
-import scalafx.scene.control.{Alert, Button, Label, SelectionMode, TableColumn, TableView}
+import scalafx.scene.control.{Alert, Button, Label, SelectionMode, TableColumn, TableView, TextInputDialog}
 import scalafx.scene.control.Alert.AlertType
 import scalafx.scene.layout.{HBox, VBox}
 
@@ -61,6 +61,12 @@ final class Todos(context: Context, store: Store) extends VBox:
 
   children = List(labelTodos, tableViewTodos, buttonBar)
 
-  private def add(): Unit = Alert(AlertType.Information, "Add todo!").showAndWait()
+  private def add(): Unit =
+    val dialogAddTodo = new TextInputDialog() {
+      initOwner(App.stage)
+      title = "Add Todo"
+      headerText = "Add Todo"
+      contentText = "todo"
+    }
 
   private def completed(): Unit = Alert(AlertType.Information, "Completed todo!").showAndWait()
