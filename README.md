@@ -20,7 +20,7 @@ Run
 
 Execute
 -------
-1. ```java -jar target/scala-3.7.0-RC1/todo-scalafx-0.1-SNAPSHOT.jar```
+1. ```java -jar target/scala-3.6.4/todo-scalafx-0.1-SNAPSHOT.jar```
 
 Persistence
 -----------
