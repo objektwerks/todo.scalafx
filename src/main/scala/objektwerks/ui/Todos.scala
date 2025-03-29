@@ -47,7 +47,7 @@ final class Todos(context: Context, store: Store) extends VBox:
     disable = false
     onAction = { _ => add() }
 
-  val buttonEdit = new Button:
+  val buttonCompleted = new Button:
     graphic = context.imageViewEdit
     text = context.buttonCompleted
     disable = false
@@ -56,7 +56,7 @@ final class Todos(context: Context, store: Store) extends VBox:
   val buttonBar = new HBox:
     spacing = 6
     padding = Insets(6)
-    children = List(buttonAdd, buttonEdit)
+    children = List(buttonAdd, buttonCompleted)
 
   children = List(labelTodos, tableViewTodos, buttonBar)
 
