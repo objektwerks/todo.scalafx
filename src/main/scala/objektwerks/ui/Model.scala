@@ -19,6 +19,7 @@ final class Model(val store: Store) extends LazyLogging:
     store.writeTodo(newTodo)
     observableTodos.insert(0, newTodo)
     selectedTodo.value = newTodo
+    logger.info("Added todo: $newTodo")
 
   def completed(): Unit =
     val completedTodo = selectedTodo.value.copy(completed = Todo.datetime())
