@@ -68,7 +68,9 @@ final class Todos(context: Context, store: Store) extends VBox:
       headerText = context.dialogAddTodoHeaderText
       contentText = context.dialogAddTodoContentText
     dialogAddTodo.showAndWait() match
-      case Some(todo) => println("TODO: add " + todo)
+      case Some(todo) =>
+        val newTodo = Todo(id = store.nextId(), todo = todo)
+        store.writeTodo(newTodo) // Add to list?
       case None => Alert(AlertType.Information, "Please, provide a todo.").showAndWait()
 
   private def completed(): Unit =
