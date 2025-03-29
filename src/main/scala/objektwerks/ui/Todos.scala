@@ -38,7 +38,7 @@ final class Todos(context: Context, store: Store) extends VBox:
         text = context.columnTodo
         cellValueFactory = _.value.todoProperty
     )
-    items = ObservableBuffer.from( store.listTodos() )
+    items = ObservableBuffer.from( store.listTodos() ) // Create Model!
     columnResizePolicy = TableView.ConstrainedResizePolicy
     selectionModel().selectionModeProperty.value = SelectionMode.Single
 
