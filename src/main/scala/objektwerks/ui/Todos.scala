@@ -71,4 +71,5 @@ final class Todos(context: Context, store: Store) extends VBox:
       case Some(todo) => println("TODO: " + todo)
       case None => Alert(AlertType.Information, "Please, provide a todo.").showAndWait()
 
-  private def completed(): Unit = Alert(AlertType.Information, "Completed todo!").showAndWait()
+  private def completed(): Unit =
+    Alert(AlertType.Information, "Completed todo!").showAndWait()
