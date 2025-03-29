@@ -87,4 +87,4 @@ final class Todos(context: Context, model: Model) extends VBox:
     if index > -1 then
       model.observableTodos.update(index, completedTodo)
       model.selectedTodo.value = completedTodo
-      buttonCompleted.disable = true
+    buttonCompleted.disable = true
