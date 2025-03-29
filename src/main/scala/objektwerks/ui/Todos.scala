@@ -11,7 +11,7 @@ final class Todos(context: Context, model: Model) extends VBox:
   padding = Insets(6)
 
   val labelTodos = new Label:
-    padding = Insets(3)
+    padding = Insets(6)
     style = "-fx-font-weight: bold"
     text = context.labelTodos
 
