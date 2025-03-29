@@ -44,7 +44,7 @@ final class Todos(context: Context, store: Store) extends VBox:
 
   tableViewTodos.selectionModel().selectedItemProperty().addListener { (_, _, selectedTodo) =>
     if selectedTodo != null then
-      // model.selectedTodo.value = selectedTodo
+      model.selectedTodo.value = selectedTodo
       buttonCompleted.disable = false
   }
 

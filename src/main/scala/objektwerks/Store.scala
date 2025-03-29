@@ -10,6 +10,7 @@ final class Store extends LazyLogging:
   private val todosPath = os.home / ".todofx" / "data"
 
   os.makeDir.all(todosPath)
+  
   logger.info("Initialized store.")
 
   def listTodos(): List[Todo] =
