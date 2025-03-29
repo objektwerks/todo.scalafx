@@ -14,6 +14,9 @@ final class Model(val store: Store) extends LazyLogging:
 
   logger.info("Initialized model.")
 
-  def add(todo: Todo): Unit = ???
+  def add(todo: Todo): Unit =
+    store.writeTodo(todo)
+    observableTodos.insert(0, todo)
+    selectedTodo.value = todo
 
   def completed(todo: Todo): Unit = ???
