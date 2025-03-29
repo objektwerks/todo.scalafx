@@ -18,17 +18,17 @@ final class Todos(context: Context, store: Store) extends VBox:
   val tableViewTodos = new TableView[Todo]():
     columns ++= List(
       new TableColumn[Todo, Int]:
-        prefWidth = 30
+        prefWidth = 20
         text = context.columnId
         cellValueFactory = _.value.idProperty
       ,
       new TableColumn[Todo, String]:
-        prefWidth = 70
+        prefWidth = 90
         text = context.columnCreated
         cellValueFactory = _.value.createdProperty
       ,
       new TableColumn[Todo, String]:
-        prefWidth = 70
+        prefWidth = 90
         text = context.columnCompleted
         cellValueFactory = _.value.completedProperty
       ,
