@@ -7,7 +7,7 @@ import scalafx.collections.ObservableBuffer
 
 import objektwerks.{Todo, Store}
 
-final class Model(val store: Store) extends LazyLogging:
+final class Model(store: Store) extends LazyLogging:
   val todos = store.listTodos()
   val observableTodos = ObservableBuffer.from( store.listTodos() ).sorted
   val selectedTodo = ObjectProperty( Todo(id = 0, todo = "") )
