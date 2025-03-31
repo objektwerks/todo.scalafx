@@ -41,3 +41,4 @@ Logging
 Resources
 ---------
 * [Os-Lib Github](https://github.com/com-lihaoyi/os-lib)
+* [uPickle](https://github.com/com-lihaoyi/upickle)
