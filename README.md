@@ -20,9 +20,9 @@ Run
 
 Execute
 -------
-1. ```java -jar target/scala-3.6.4/todo-scalafx-0.6-SNAPSHOT.jar```
+1. ```java -jar target/scala-3.6.4/todo-scalafx-0.7-SNAPSHOT.jar```
 >or:
-1. ```java -jar .assembly/todo-scalafx-0.6-SNAPSHOT.jar```
+1. ```java -jar .assembly/todo-scalafx-0.7-SNAPSHOT.jar```
 
 Persistence
 -----------
