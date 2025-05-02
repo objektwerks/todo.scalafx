@@ -4,7 +4,7 @@ version := "0.7-SNAPSHOT"
 scalaVersion := "3.6.4" // Scala 3.7.0-RC4 breaks ScalaFx!
 libraryDependencies ++= Seq(
   "org.scalafx" %% "scalafx" % "24.0.0-R35",
-  "com.lihaoyi" %% "os-lib" % "0.11.5-M5",
+  "com.lihaoyi" %% "os-lib" % "0.11.5-M6",
   "com.lihaoyi" %% "upickle" % "4.1.0",
   "com.typesafe" % "config" % "1.4.3",
   "com.typesafe.scala-logging" %% "scala-logging" % "3.9.5",
