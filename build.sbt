@@ -1,7 +1,7 @@
 name := "todo.scalafx"
 organization := "objektwerks"
 version := "0.7-SNAPSHOT"
-scalaVersion := "3.6.4" // Scala 3.7.1-RC2 breaks ScalaFx!
+scalaVersion := "3.6.4" // Scala 3.7.1 still breaks ScalaFx!
 libraryDependencies ++= Seq(
   "org.scalafx" %% "scalafx" % "24.0.0-R35",
   "com.lihaoyi" %% "os-lib" % "0.11.5-M9",
