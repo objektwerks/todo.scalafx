@@ -12,9 +12,7 @@ libraryDependencies ++= Seq(
   "org.scalatest" %% "scalatest" % "3.2.19" % Test
 )
 scalacOptions ++= Seq(
-  "-Wunused:all",
-  // Silences 3.7.0+ implicit using warnings:
-  "-Wconf:msg=Implicit parameters should be provided with a `using` clause:s"
+  "-Wunused:all"
 )
 outputStrategy := Some(StdoutOutput)
 parallelExecution := false
