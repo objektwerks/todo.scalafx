@@ -1,7 +1,7 @@
 name := "todo.scalafx"
 organization := "objektwerks"
 version := "0.7-SNAPSHOT"
-scalaVersion := "3.7.4-RC1"
+scalaVersion := "3.7.4-RC2"
 libraryDependencies ++= Seq(
   "org.scalafx" %% "scalafx" % "24.0.2-R36",
   "com.lihaoyi" %% "os-lib" % "0.11.6",
