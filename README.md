@@ -1,6 +1,6 @@
 Todo ScalaFx
 ------------
->Todo ScalaFx app using Os-lib, uPickle and Scala 3.
+>Todo ScalaFx app using Os-Lib, uPickle and Scala 3.
 
 Build
 -----
