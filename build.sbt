@@ -4,7 +4,7 @@ version := "0.7-SNAPSHOT"
 scalaVersion := "3.8.2-RC1"
 libraryDependencies ++= Seq(
   "org.scalafx" %% "scalafx" % "24.0.2-R36",
-  "com.lihaoyi" %% "os-lib" % "0.11.9-M2",
+  "com.lihaoyi" %% "os-lib" % "0.11.9-M3",
   "com.lihaoyi" %% "upickle" % "4.4.2",
   "com.typesafe" % "config" % "1.4.3",
   "com.typesafe.scala-logging" %% "scala-logging" % "3.9.5",
